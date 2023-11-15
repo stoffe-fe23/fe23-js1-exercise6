@@ -8,7 +8,8 @@ function addHeading(type, headingText) {
 addHeading("h1", "Övning 6");
 
 //////////////////////////////////////////////////////////////////////////////////
-addHeading("h2", "Göra om till arrow-funktioner (konsoll");
+addHeading("h2", "Arrow-funktioner (konsoll)");
+
 const divideNumbers = (x, y) => x / y;
 console.log("Division", divideNumbers(5, 10));
 
@@ -42,7 +43,7 @@ function arrayMapNumbers(array, callback) {
 }
 
 const numbers = [19, 221, 32, 76, 981, 2];
-const numbers2 = numbers;
+const numbers2 = [...numbers];
 const double = (x) => x * 2;
 const square = (x) => x * x;
 
@@ -50,13 +51,12 @@ console.log("ORIGINAL", numbers);
 arrayMapNumbers(numbers, double);
 console.log("DOUBLED", numbers);
 arrayMapNumbers(numbers2, square);
-console.log("SQUARED", numbers);
+console.log("SQUARED", numbers2);
 
 //////////////////////////////////////////////////////////////////////////////////
 addHeading("h2", "Highest & lowest (konsoll)");
 
 const getHighest = (x, y) => x > y ? x : y;
-
 const getLowest = (x, y) => x < y ? x : y;
 
 function getArrayValue(array, callback) {
@@ -68,10 +68,9 @@ function getArrayValue(array, callback) {
 }
 
 const cmpNumbers = [19, 221, 32, 76, 981, 2];
-
 const highest = getArrayValue(cmpNumbers, getHighest);
 const lowest = getArrayValue(cmpNumbers, getLowest);
 
-console.log("DATA", cmpNumbers);
+console.log("COMPARE DATA", cmpNumbers);
 console.log("LOWEST", lowest);
 console.log("HIGHEST", highest);
