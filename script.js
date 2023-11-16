@@ -42,10 +42,11 @@ function arrayMapNumbers(array, callback) {
     }
 }
 
-const numbers = [19, 221, 32, 76, 981, 2];
-const numbers2 = [...numbers];
 const double = (x) => x * 2;
 const square = (x) => x * x;
+
+const numbers = [19, 221, 32, 76, 981, 2];
+const numbers2 = [...numbers];
 
 console.log("ORIGINAL", numbers);
 arrayMapNumbers(numbers, double);
