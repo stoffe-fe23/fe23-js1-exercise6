@@ -62,13 +62,13 @@ const getLowest = (x, y) => x < y ? x : y;
 
 function getArrayValue(array, callback) {
     let compare = array[0];
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 1; i < array.length; i++) {
         compare = callback(array[i], compare);
     }
     return compare;
 }
 
-const cmpNumbers = [19, 221, 32, 76, 981, 2];
+const cmpNumbers = [221, 2, 32, 76, 19, 981];
 const highest = getArrayValue(cmpNumbers, getHighest);
 const lowest = getArrayValue(cmpNumbers, getLowest);
 
